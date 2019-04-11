@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title><script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<img src="img/0.png" id="img1">
+		<img src="img/0.png" id="img2">:
+		<img src="img/0.png" id="img3">
+		<img src="img/0.png" id="img4">:
+		<img src="img/0.png" id="img5">
+		<img src="img/0.png" id="img6">
+		<script type="text/javascript">
+			$(function(){
+				function foo(){ 
+					var odate = new Date();
+					var hours = odate.getHours();
+					var seconds = odate.getSeconds();
+					var minute = odate.getMinutes();
+					console.log(typeof hours)
+					hour = String(hours);
+					 
+					seconds = String(seconds);
+					minute = String(minute);
+					
+					var str = "" + hour + minute + seconds;
+					
+					$("#img1").src = "img/"+str[0]+".png";
+					$("#img2").src = "img/"+str[1]+".png";
+					$("#img3").src = "img/"+str[2]+".png";
+					$("#img4").src = "img/"+str[3]+".png";
+					$("#img5").src = "img/"+str[4]+".png";
+					$("#img6").src = "img/"+str[5]+".png";
+				}
+				foo();
+				
+			})
+			
+		</script>
+	</body>
+</html>

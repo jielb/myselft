@@ -1,0 +1,42 @@
+img{
+	display: block;
+}
+#tupian div{
+	border: 1px solid #cecece;
+	width: 500px;
+	height: 700px; 
+	margin: 2px auto;
+}
+#tupian div img{ 
+	width: 500px;
+	height: 700px;
+}
+#louti{
+	position: fixed;
+	left: 10px;
+	top: 30%;
+	font-size: 15px;
+	line-height: 30px;
+	text-align: center;
+	color: black;
+	width: 102px;
+	height: 225px; 
+	display: none;
+}
+#louti div{
+	width: 100px;
+	height: 30px;
+	border-top:1px solid #cecece;
+	border-left:1px solid #cecece;
+	border-right:1px solid #cecece;
+	cursor: pointer;
+}
+#louti div:last-child{
+	border-bottom: 1px solid #CECECE;
+	background: red;
+	color: white;
+}
+#louti div:hover,.red{
+	background: red;
+	color: white;
+}

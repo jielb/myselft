@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+	</head>
+	<body>
+		<div id="acc">
+			username:<input type="text" id="txt" />
+			password:<input type="password" id="pass" />
+			email:<input type="email" id="eml" />
+			sex: <input type="text" id="sx" />
+			<input type="button" id="btn" value="注册" />
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				 $.get("http://47.104.244.134:8080/username.do",{username:$("#txt").val()},function(data){
+				 	
+				 	console.log(data)
+				 	
+				 })
+				 
+				 
+			/*	 $.post("http://47.104.244.134:8080/usersave.do",{
+					 username:$("#txt").val(),
+					 password:$("#pass").val(),
+					 email:$("#em").val(),
+					 sex:"男"
+				 },function(data){
+				 	if(data.code == )
+				 })
+				 
+			})*/
+			
+			
+			
+		</script>
+	</body>
+</html>

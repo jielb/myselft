@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<style type="text/css">
+			body,input{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				height: 2000px;
+			}
+			#btn{
+				position: fixed;
+				bottom: 30px;
+				right: 20px;
+				outline: none;
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<input type="button" id="btn"  value="回到顶部">
+		<script type="text/javascript">
+			
+			//scroll定义 ： 当用户滚动指定元素时，会发生scroll事件
+			//scroll用法： scroll事件可用于所有可滚动元素或window对象（浏览器窗口）
+			//scroll()方法触发scroll事件，或当规定运行scroll事件使运行函数
+			
+			//scrollTop() 方法  设置或返回被选元素的垂直滚动条位置。
+			/*$(function(){
+				$(window).scroll(function(){
+					var scrolltop = $(this).scrollTop()
+					if(scrolltop > 500){
+						$("#btn").css("display","block")
+					}else{
+						$("#btn").css("display","none")
+					}
+					$("#btn").click(function(){
+						$("body,html").stop().animate({"scrollTop":0},800)
+					})
+				})
+			})*/
+			
+			
+			
+			
+		
+		</script>
+	</body>
+</html>

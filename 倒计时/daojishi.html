@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<style type="text/css">
+			#box {
+				width: 300px;
+				height: 40px;
+				font-size: 16px;
+				text-align: center;
+				line-height: 40px;
+				margin: 100px auto;
+				border: 1px solid #c1c1c1;
+				color: red;
+				font-weight: 800;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box"></div>
+		<script type="text/javascript">
+			$(function() {
+				var preDay = new Date("2019-2-23 15:40");
+
+				function miaosha() {
+					var nowDay = new Date();
+					var ss = preDay - nowDay;
+					ss = ss / 1000;
+					var day = Math.floor(ss / 3600 / 24);
+					var hours = Math.floor(ss / 3600 % 60);
+					var minute = Math.floor(ss / 60 % 60);
+					var seconds = Math.floor(ss % 60);
+					if(day < 10) {
+						day = "0" + day;
+					}
+					if(hours < 10) {
+						hours = "0" + hours;
+					}
+					if(minute < 10) {
+						minute = "0" + minute;
+					}
+					if(seconds < 10) {
+						seconds = "0" + seconds;
+					}
+					$("#box").html("<span>"+day+"</sapn>"+"<span>"+hour+"</sapn>"+"<span>"+minute+"</sapn>"+"<span>"+second+"</sapn>");
+					if(ss <= 0) {
+						clearInterval(timer);
+						$("#box").html("秒杀结束")
+					};
+				}
+				miaosha();
+				var timer = setInterval(function() {
+					miaosha();
+				},1000)
+			})
+
+		/*	把函数进行先调用,然后在放入定时器中可以避免页面显示内容延时显示 
+			    原因是不是因为:1:js代码从上往下执行 
+			                  2:setInterval()是异步函数,先进性函数调用，在页面显示最开始结果，然后在进行定时器代码执行*/
+			                 
+			/*如果把函数直接写在定时器没内，进行运行，页面不会直接显示结果，原因是不是因为：
+			 *       前一秒时间执行定时器，里边代码，下一秒才执行setInterval（）
+			 * 
+			 */
+		</script>
+	</body>
+
+</html>
